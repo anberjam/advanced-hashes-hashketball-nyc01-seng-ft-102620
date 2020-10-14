@@ -1,3 +1,4 @@
+require 'pry'
 # Write your code below game_hash
 def game_hash
   {
@@ -126,4 +127,19 @@ def game_hash
   }
 end
 
-# Write code here
+def num_points_scored(name)
+  data = game_hash
+  
+  data.each do |home_away,team_data|
+    team_data.each do |team_data_keys, specifics|
+      if team_data_keys==players
+        specifics.each do |names|
+          if names = name
+            return [home_away][team_data_keys][specifics]
+      end
+    end
+  end
+end
+          
+end
+
