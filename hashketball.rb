@@ -135,7 +135,7 @@ def num_points_scored(name)
       if team_data_keys==players
         specifics.each do |names|
           if names = name
-            return [home_away][team_data_keys][specifics]
+            return [home_away][players][specifics]
       end
     end
   end
